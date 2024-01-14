@@ -1,0 +1,56 @@
+@import "../../styles/mixins.scss";
+
+.habits {
+    padding-block: 7rem;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+            row-gap: 4rem;
+        }
+    }
+
+    &__img-container {
+        position: relative;
+
+        img {
+            margin-inline: auto;
+
+            @include respond(phone) {
+                width: 60%;
+            }
+        }
+    }
+
+    .img-1 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 5%;
+
+        @include respond(phone) {
+            width: 30%;
+        }
+    }
+
+    &__text {
+        max-width: 64%;
+
+        @include respond(tab-port) {
+            max-width: 94%;
+            margin-inline: auto;
+        }
+    }
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: #6a7280;
+    }
+}

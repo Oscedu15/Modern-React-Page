@@ -1,0 +1,113 @@
+@import "../../styles/mixins.scss";
+
+.testimonials {
+    position: relative;
+    padding-block: 20rem;
+
+    @include respond(tab-port) {
+        padding-block: 10rem;
+    }
+
+    &__text {
+        width: 60%;
+        margin-inline: auto;
+        text-align: center;
+        margin-bottom: 5rem;
+
+        p {
+            color: #6a7280;
+            margin-top: 1rem;
+        }
+    }
+
+    &__carousel {
+        width: 80%;
+        margin-inline: auto;
+        background-color: #fff7ed;
+        overflow: hidden;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    &__card {
+        background-color: #fff7ed;
+        border-radius: 1rem;
+        padding: 4rem 2rem;
+
+        div {
+            width: fit-content;
+            margin-inline: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.3rem;
+            margin-top: 3rem;
+        }
+
+        p {
+            color: #374151;
+            font-weight: 500;
+        }
+
+        span {
+            font-size: 0.875rem;
+        }
+
+        img {
+            width: 10rem;
+        }
+
+        @include respond(tab-port) {
+            padding: 1rem;
+        }
+    }
+
+    &__quote {
+        margin-bottom: 0px;
+        margin-left: 25px;
+        padding: 10px 0px 10px 25px;
+        border-style: none none none solid;
+        border-width: 0px 0px 0px 2px;
+        border-color: #111827;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 2rem;
+        line-height: 1.2;
+        font-weight: 700;
+
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__bg-1 {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__bg-2 {
+        width: 100%;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+    }
+
+    .carousel .control-dots .dot {
+        margin-top: 2rem;
+        opacity: 0.3;
+        box-shadow: 0 0 3px rgba(51, 51, 51, 0.4);
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        background: #222;
+    }
+
+    .carousel .slide img {
+        width: 3.5rem;
+        vertical-align: top;
+        border: 0;
+    }
+}

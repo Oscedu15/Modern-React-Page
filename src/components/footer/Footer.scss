@@ -1,0 +1,116 @@
+@import "../../styles/mixins.scss";
+
+.footer {
+    padding-block: 5rem;
+    background-color: #210751;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        padding-inline: 1rem;
+        align-items: center;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__text {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 1.7rem;
+
+        h2 {
+            color: #fff;
+        }
+    }
+
+    &__store {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+
+        img {
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover {
+                opacity: 70%;
+            }
+        }
+    }
+
+    &__img-container {
+        background-image: url("../../assets/bg-footer-phone.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        img {
+            margin-inline: auto;
+
+            @include respond(tab-port) {
+                width: 40%;
+            }
+        }
+    }
+
+    h3 {
+        color: #fff;
+        font-size: 1.25rem;
+        line-height: 1.2;
+        letter-spacing: -0.015rem;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-weight: 700;
+    }
+
+    li, p {
+        transition: color 200ms ease;
+        color: rgba(255, 255, 255, 0.48);
+        font-weight: 500;
+        letter-spacing: -0.015rem;
+        cursor: pointer;
+        margin-top: 0.6rem;
+
+        &:hover {
+            color: #f2f4f6;
+        }
+    }
+
+    &__links-container {
+        padding-inline: 1rem;
+        margin-top: 7rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 5rem;
+        flex-wrap: wrap;
+    }
+
+    &__logo-container {
+        flex: 1;
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        margin-top: 1.5rem;
+        gap: 0.5rem;
+    }
+
+    &__icon {
+        padding: 0.5rem;
+        background: #fff;
+        display: grid;
+        place-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 70%;
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@import "../../styles/mixins.scss";
+
+.navbar {
+    padding-block: 1.4rem;
+    background-color: #ffecd5;
+    position: relative;
+
+    @include respond(tab-port) {
+        padding-block: 1.2rem;
+    }
+
+    &__logo {
+        transition: all 0.1s ease;
+
+        &:hover {
+            opacity: 85%;
+        }
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        @include respond(tab-port) {
+            justify-content: space-between;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @include respond(tab-port) {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffecd5;
+            padding-block: 0.5rem;
+            width: 100%;
+            transform: translateY(0%);
+            animation: navMotion 1s ease;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        li {
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.5 ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #fdd7aa;
+            }
+        }
+
+        a {
+            color: #374151;
+            font-family: "Inter" sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 500;
+            letter-spacing: -0.015rem;
+
+            &:hover {
+                color: #6025cd;
+            }
+        }
+    }
+
+    &__icon {
+        padding: 0.6rem;
+        cursor: pointer;
+        border-radius: 0.4rem;
+        display: none;
+
+        @include respond(tab-port) {
+            display: inline-block;
+
+            svg {
+                display: grid;
+                place-content: center;
+            }
+        }
+    }
+}
+
+.showNav {
+    display: flex;
+}
+
+.add-bg {
+    background-color: #6025cd;
+    color: white;
+}
+
+@keyframes navMotion {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translate(0%);
+    }
+}

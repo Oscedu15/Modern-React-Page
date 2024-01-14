@@ -1,0 +1,48 @@
+@import "./styles/mixins.scss";
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+}
+
+button {
+    display: inline-block;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: -0.015rem;
+}
+
+h2 {
+    color: #111827;
+    font-size: 3rem;
+    line-height: 1.1;
+    letter-spacing: -0.025rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+
+    @include respond(tab-port) {
+        font-size: 2.5rem;
+    }
+}

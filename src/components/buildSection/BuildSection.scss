@@ -1,0 +1,84 @@
+@import "../../styles/mixins.scss";
+
+.build {
+    padding-block: 4rem 25rem;
+    position: relative;
+
+    @include respond(phone) {
+        padding-block: 3rem 12rem;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-end;
+        gap: 8rem;
+        padding-inline: 2rem;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+            gap: 5rem
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    &__feature {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        img {
+            width: fit-content;
+        }
+    }
+
+    h3 {
+        color: #111827;
+        font-size: 1.25rem;
+        line-height: 1.2;
+        letter-spacing: -0.015rem;
+        text-emphasis: none;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        margin-bottom: 20px;
+        color: #212730;
+    }
+
+    &__right {
+        position: relative;
+
+        img {
+            margin-inline: auto;
+
+            @include respond(phone) {
+                width: 80%;
+            }
+        }
+    }
+
+    .img-1 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include respond(phone) {
+            width: 40%;
+        }
+    }
+
+    .bg-price {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+}

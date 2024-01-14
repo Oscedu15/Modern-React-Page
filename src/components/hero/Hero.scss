@@ -1,0 +1,66 @@
+@import "../../styles/mixins.scss";
+
+.hero {
+    background-image: url("../../assets/bg-hero.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-block: 7rem 5rem;
+
+
+    &__text {
+        width: fit-content;
+        margin-inline: auto;
+        text-align: center;
+
+        h1 {
+            font-family: "IBM Plex Sans", sans-serif;
+            color: #1f2937;
+            font-weight: 700;
+            font-size: 5rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+
+            @include respond(tab-port) {
+            font-size: 3rem;
+            }
+
+        }
+
+        p {
+            color: #6a7280;
+        }     
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: fit-content;
+        margin-inline: auto;
+        margin-top: 4.5rem;
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    &__img-container {
+        position: relative;
+        padding-top: 2rem;
+        width: 80%;
+        margin-inline: auto;
+        background-image: url("../../assets/bg-hero-phones.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        img {
+            margin-inline: auto;
+
+            @include respond(tab-port) {
+                width: 60%;
+            }
+        }
+    }
+}

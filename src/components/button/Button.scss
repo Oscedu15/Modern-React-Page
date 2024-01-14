@@ -1,0 +1,16 @@
+@import "../../styles/mixins.scss";
+
+.btn {
+    padding: 0.5rem 0.8rem;
+    font-family: "Inter", sans-serif;
+    background-color: #6025cd;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: #7e52ee;
+    }
+}
